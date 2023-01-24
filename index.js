@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const helmet = require("helmet");
-const morgan = require("morgan");
+// const helmet = require("helmet");
+// const morgan = require("morgan");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
@@ -19,8 +19,8 @@ mongoose.connect(
 
 //middleware
 app.use(express.json());
-app.use(helmet());
-app.use(morgan("common"));
+// app.use(helmet());
+// app.use(morgan("common"));
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
